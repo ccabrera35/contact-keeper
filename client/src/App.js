@@ -27,9 +27,12 @@ const App = () => {
                             <div className="container">
                                 <Alerts />
                                 <Routes>
-                                    <Route path="/" element={<PrivateRoute component={Home}/>}/>
-                                        {/* <Route path="/" element={<Home />} />
-                                    </Route> */}
+                                    <Route
+                                        path="/"
+                                        element={
+                                            <PrivateRoute component={Home} />
+                                        }
+                                    />
                                     <Route path="/about" element={<About />} />
                                     <Route
                                         path="/register"

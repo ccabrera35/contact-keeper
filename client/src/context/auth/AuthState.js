@@ -14,11 +14,6 @@ import {
     CLEAR_ERRORS
 } from "../types";
 
-// export const useAuth = () => {
-//     const { state, dispatch } = useContext(AuthContext);
-//     return [state, dispatch];
-// };
-
 const AuthState = (props) => {
     const initialState = {
         token: localStorage.getItem("token"),

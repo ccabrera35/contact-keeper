@@ -12,9 +12,6 @@ const Login = (props) => {
     const { error, clearErrors, isAuthenticated, login } = authContext;
 
     useEffect(() => {
-        // if (isAuthenticated) {
-        //     props.history.push("/");
-        // }
         if (error === "Invalid Credentials") {
             setAlert(error, "danger");
             clearErrors();

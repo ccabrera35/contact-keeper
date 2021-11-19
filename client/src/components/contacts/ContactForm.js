@@ -1,8 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import ContactContext from "../../context/contact/contactContext";
 
-// phone number input should include dashes
-
 const ContactForm = () => {
     const contactContext = useContext(ContactContext);
     const { addContact, updateContact, clearCurrent, current } = contactContext;
