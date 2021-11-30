@@ -13,40 +13,32 @@ import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
-    setAuthToken(localStorage.token);
+  setAuthToken(localStorage.token);
 }
 
 const App = () => {
-    return (
-        <AuthState>
-            <ContactState>
-                <AlertState>
-                    <Router>
-                        <>
-                            <Navbar />
-                            <div className="container">
-                                <Alerts />
-                                <Routes>
-                                    <Route
-                                        path="/"
-                                        element={
-                                            <PrivateRoute component={Home} />
-                                        }
-                                    />
-                                    <Route path="/about" element={<About />} />
-                                    <Route
-                                        path="/register"
-                                        element={<Register />}
-                                    />
-                                    <Route path="/login" element={<Login />} />
-                                </Routes>
-                            </div>
-                        </>
-                    </Router>
-                </AlertState>
-            </ContactState>
-        </AuthState>
-    );
+  return (
+    <AuthState>
+      <ContactState>
+        <AlertState>
+          <Router>
+            <>
+              <Navbar />
+              <div className="container">
+                <Alerts />
+                <Routes>
+                  <Route path="/" element={<PrivateRoute component={Home} />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/login" element={<Login />} />
+                </Routes>
+              </div>
+            </>
+          </Router>
+        </AlertState>
+      </ContactState>
+    </AuthState>
+  );
 };
 
 export default App;
